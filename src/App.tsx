@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import nominal from "./data/nominal.json";
 import "./App.css";
 import { evaluate } from "mathjs";
+import { rupiah } from "./helper/formatRupiah";
 
 interface Money {
   nominal: string;
@@ -18,7 +19,6 @@ function App() {
     if (firstValue == 0) {
       setFirstValue(+nominal);
       setDisplayCounter(nominal);
-      // setResult(+nominal);
     } else if (
       displayCounter.charAt(displayCounter.length - 2) == "+" ||
       displayCounter.charAt(displayCounter.length - 2) == "-"
@@ -30,6 +30,11 @@ function App() {
   const plus = (): void => {
     if (
       firstValue != 0 &&
+      displayCounter.charAt(displayCounter.length - 2) == "-"
+    ) {
+      setDisplayCounter(displayCounter.slice(0, -3).concat(" + "));
+    } else if (
+      firstValue != 0 &&
       displayCounter.charAt(displayCounter.length - 2) != "+" &&
       displayCounter.charAt(displayCounter.length - 2) != "-"
     ) {
@@ -40,6 +45,11 @@ function App() {
   const minus = (): void => {
     if (
       firstValue != 0 &&
+      displayCounter.charAt(displayCounter.length - 2) == "+"
+    ) {
+      setDisplayCounter(displayCounter.slice(0, -3).concat(" - "));
+    } else if (
+      firstValue != 0 &&
       displayCounter.charAt(displayCounter.length - 2) != "+" &&
       displayCounter.charAt(displayCounter.length - 2) != "-"
     ) {
@@ -48,22 +58,16 @@ function App() {
   };
 
   const countResult = async () => {
-    // if (
-    //   displayCounter.charAt(displayCounter.length - 2) == "+" ||
-    //   displayCounter.charAt(displayCounter.length - 2) == "-"
-    // ) {
-    //   setDisplayCounter(displayCounter.slice(0, -3));
-    //   setResult(evaluate(displayCounter));
-    //   // console.log(displayCounter);
-    // } else {
     setResult(evaluate(displayCounter));
   };
 
-  const clear = () => {
+  const clear = (): void => {
     setFirstValue(0);
     setDisplayCounter("0");
     setResult(0);
   };
+
+  const deleteValue = (): void => {};
 
   useEffect(() => {
     countResult();
@@ -72,12 +76,12 @@ function App() {
   return (
     <div className="main-container">
       <div className="inner-wrapper">
-        <div className="display min-h-[300px] bg-red-600 flex flex-col">
+        <div className="display min-h-[250px] bg-red-600 flex flex-col">
           <div className="min-h-[120px] bg-slate-400 flex items-center p-3">
             <h1 className="text-2xl font-bold">{displayCounter}</h1>
           </div>
-          <div className="min-h-[180px] bg-red-300 flex justify-center items-center p-3">
-            <h1 className="text-2xl font-bold">{result}</h1>
+          <div className="min-h-[130px] bg-red-300 flex justify-center items-center p-3">
+            <h1 className="text-2xl font-bold">{rupiah(+result)}</h1>
           </div>
         </div>
         <div className="money-list mt-4 mb-[90px]  min-h-[200px] gap-2 grid lg:grid-cols-5 md:grid-cols-3 max-sm:grid-cols-2">

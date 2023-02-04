@@ -1,5 +1,9 @@
 [
   {
+    "nominal": "100",
+    "image": "https://en.numista.com/catalogue/photos/indonesie/6-original.jpg"
+  },
+  {
     "nominal": "200",
     "image": "https://i.colnect.net/f/896/132/200-Rupiah.jpg"
   },
@@ -22,5 +26,17 @@
   {
     "nominal": "10000",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_2016_10000r_r.jpg/250px-Indonesia_2016_10000r_r.jpg"
+  },
+  {
+    "nominal": "20000",
+    "image": "https://ozip.com.au/wp-content/uploads/2020/08/20_2.png"
+  },
+  {
+    "nominal": "50000",
+    "image": "https://ozip.com.au/wp-content/uploads/2020/08/50_2.png"
+  },
+  {
+    "nominal": "100000",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Indonesia_2004_100000r_o.jpg"
   }
 ]
