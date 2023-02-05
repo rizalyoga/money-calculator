@@ -1,42 +1,52 @@
 [
   {
     "nominal": "100",
-    "image": "https://en.numista.com/catalogue/photos/indonesie/6-original.jpg"
+    "images": "https://en.numista.com/catalogue/photos/indonesie/6-original.jpg",
+    "image": "src/assets/pecahan-uang/100.jpg"
   },
   {
     "nominal": "200",
-    "image": "https://i.colnect.net/f/896/132/200-Rupiah.jpg"
+    "images": "https://i.colnect.net/f/896/132/200-Rupiah.jpg",
+    "image": "src/assets/pecahan-uang/200.jpg"
   },
   {
     "nominal": "500",
-    "image": "https://i.colnect.net/f/3810/444/500-Rupiah-T-B-Simatupang.jpg"
+    "images": "https://i.colnect.net/f/3810/444/500-Rupiah-T-B-Simatupang.jpg",
+    "image": "src/assets/pecahan-uang/500.jpg"
   },
   {
     "nominal": "1000",
-    "image": "https://backpackstory.files.wordpress.com/2014/11/1000rupiahperahu1.jpg"
+    "images": "https://backpackstory.files.wordpress.com/2014/11/1000rupiahperahu1.jpg",
+    "image": "src/assets/pecahan-uang/1000.jpg"
   },
   {
     "nominal": "2000",
-    "image": "https://www.pegipegi.com/travel/wp-content/uploads/2017/08/dua-ribu.jpeg"
+    "images": "https://www.pegipegi.com/travel/wp-content/uploads/2017/08/dua-ribu.jpeg",
+    "image": "src/assets/pecahan-uang/2000.jpeg"
   },
   {
     "nominal": "5000",
-    "image": "https://i.colnect.net/f/4430/664/5000_Rupiah.jpg"
+    "images": "https://i.colnect.net/f/4430/664/5000_Rupiah.jpg",
+    "image": "src/assets/pecahan-uang/5000.jpg"
   },
   {
     "nominal": "10000",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_2016_10000r_r.jpg/250px-Indonesia_2016_10000r_r.jpg"
+    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_2016_10000r_r.jpg/250px-sIndonesia_2016_10000r_r.jpg",
+    "image": "src/assets/pecahan-uang/10000.jpg"
   },
   {
     "nominal": "20000",
-    "image": "https://ozip.com.au/wp-content/uploads/2020/08/20_2.png"
+    "images": "https://ozip.com.au/wp-content/uploads/2020/08/20_2.png",
+    "image": "src/assets/pecahan-uang/20000.png"
   },
   {
     "nominal": "50000",
-    "image": "https://ozip.com.au/wp-content/uploads/2020/08/50_2.png"
+    "images": "https://ozip.com.au/wp-content/uploads/2020/08/50_2.png",
+    "image": "src/assets/pecahan-uang/50000.png"
   },
   {
     "nominal": "100000",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Indonesia_2004_100000r_o.jpg"
+    "images": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Indonesia_2004_100000r_o.jpg",
+    "image": "src/assets/pecahan-uang/100000.jpg"
   }
 ]
