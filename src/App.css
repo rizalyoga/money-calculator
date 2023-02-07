@@ -1,13 +1,20 @@
 #root {
   margin: 0 auto;
-  /* background-color: red; */
 }
 
 .main-container {
   width: 100%;
+  min-height: 100vh;
 }
 
 .inner-wrapper {
+  /* background-color: rgba(255, 227, 243, 0.79); */
   width: 100%;
-  padding: 0 4px;
+  padding: 0 40px;
+}
+
+@media (max-width: 885px) {
+  .inner-wrapper {
+    padding: 0 4px;
+  }
 }
