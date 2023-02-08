@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import nominal from "./data/nominal.json";
 import { evaluate } from "mathjs";
+import nominal from "./data/nominal.json";
 
 // Components
 import { showAlert } from "./components/alert/Alert";
@@ -21,7 +21,6 @@ function App() {
   const [firstValue, setFirstValue] = useState<number>(0);
   const [displayCounter, setDisplayCounter] = useState<string[]>([]);
   const [isShowModal, setIsShowModal] = useState<boolean>(false);
-  const [listImageMoney, setListImageMoney] = useState<string[]>([]);
 
   const inputMoney = (nominal: string): void => {
     if (firstValue == 0) {
@@ -114,7 +113,7 @@ function App() {
         {/* Display & Cards Components */}
         <div className="inner-wrapper">
           <Display displayCounter={displayCounter} result={result} />
-          <div className="money-list mt-4 pb-[70px] min-h-[200px] gap-2 grid lg:grid-cols-5 md:grid-cols-3 max-[768px]:grid-cols-3 max-sm:grid-cols-2 max-[322px]:grid-cols-1">
+          <div className="money-list mt-4 pb-[95px] min-h-[200px] gap-2 grid lg:grid-cols-5 md:grid-cols-3 max-[768px]:grid-cols-3 max-sm:grid-cols-2 max-[322px]:grid-cols-1">
             {moneys.map((money) => (
               <Card
                 image={money.image}

@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { rupiah } from "../../helper/formatRupiah";
+
+// Moneys Image
 import seratusRibu from "../../assets/pecahan-uang/100000.jpg";
 import limaPuluhRibu from "../../assets/pecahan-uang/50000.png";
 import duaPuluhRibu from "../../assets/pecahan-uang/20000.png";
@@ -36,7 +38,6 @@ const Modal = ({ isShowModal, setIsShowModal, result }: ModalProps) => {
         i -= 1;
       }
     }
-
     setListMoney(moneys);
   };
 
@@ -78,13 +79,6 @@ const Modal = ({ isShowModal, setIsShowModal, result }: ModalProps) => {
 
   return (
     <>
-      <button
-        className="bg-pink-500 text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button"
-        onClick={() => setIsShowModal(true)}
-      >
-        Open regular modal
-      </button>
       {isShowModal ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -96,35 +90,21 @@ const Modal = ({ isShowModal, setIsShowModal, result }: ModalProps) => {
                   <h3 className="text-3xl font-semibold">
                     Hasil : {rupiah(+result)}
                   </h3>
-                  <button
-                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setIsShowModal(false)}
-                  >
-                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                      ×
-                    </span>
-                  </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto overflow-auto">
+                <div className="relative p-6 flex-auto overflow-auto min-w-[40rem] max-sm:min-w-[20rem]">
                   {listMoney &&
                     listMoney.map((nominal) => (
                       <img
                         className="py-2 h-[18.75rem] w-[40rem] max-sm:h-[10rem] max-sm:w-[30rem]"
                         src={setImageMoney(nominal)}
-                        alt="seratus-ribu"
+                        alt={`${nominal} rupiah`}
+                        title={`${nominal} rupiah`}
                       />
                     ))}
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-                  <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => splitResult()}
-                  >
-                    hitung
-                  </button>
                   <button
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
