@@ -9,7 +9,7 @@ interface CardProps {
 const Card = ({ nominal, image, inputMoney }: CardProps) => {
   return (
     <div
-      className="money-button flex flex-col cursor-pointer bg-gradient-to-r from-pink-300  via-white to bg-sky-300 active:bg-gradient-to-r active:from-sky-300  to active:bg-pink-400 rounded-md"
+      className="money-button flex flex-col cursor-pointer bg-gradient-to-r from-pink-300  via-white to bg-sky-300 active:bg-gradient-to-r active:from-sky-300 to active:bg-pink-400 rounded-md"
       title={`${nominal} rupiah`}
       onClick={() => inputMoney(nominal)}
     >

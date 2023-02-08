@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import nominal from "./data/nominal.json";
 import { evaluate } from "mathjs";
-import { rupiah } from "./helper/formatRupiah";
+import nominal from "./data/nominal.json";
 
 // Components
 import { showAlert } from "./components/alert/Alert";
@@ -22,7 +21,6 @@ function App() {
   const [firstValue, setFirstValue] = useState<number>(0);
   const [displayCounter, setDisplayCounter] = useState<string[]>([]);
   const [isShowModal, setIsShowModal] = useState<boolean>(false);
-  const [listImageMoney, setListImageMoney] = useState<string[]>([]);
 
   const inputMoney = (nominal: string): void => {
     if (firstValue == 0) {
@@ -80,12 +78,6 @@ function App() {
     }
   };
 
-  const clear = (): void => {
-    setFirstValue(0);
-    setDisplayCounter([]);
-    setResult(0);
-  };
-
   const deleteValue = (): void => {
     if (
       displayCounter[displayCounter.length - 1] == " - " ||
@@ -95,6 +87,12 @@ function App() {
     } else {
       setDisplayCounter(displayCounter.slice(0, -2));
     }
+  };
+
+  const clear = (): void => {
+    setFirstValue(0);
+    setDisplayCounter([]);
+    setResult(0);
   };
 
   const showModal = () => {
@@ -112,6 +110,7 @@ function App() {
   return (
     <>
       <div className="main-container bg-gradient-to-br from-white via-cyan-100 to-pink-100 ">
+        {/* Display & Cards Components */}
         <div className="inner-wrapper">
           <Display displayCounter={displayCounter} result={result} />
           <div className="money-list mt-4 pb-[95px] min-h-[200px] gap-2 grid lg:grid-cols-5 md:grid-cols-3 max-[768px]:grid-cols-3 max-sm:grid-cols-2 max-[322px]:grid-cols-1">
@@ -125,6 +124,7 @@ function App() {
             ))}
           </div>
         </div>
+        {/* Footer that contain buttons */}
         <Footer
           plus={plus}
           minus={minus}
