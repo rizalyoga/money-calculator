@@ -70,7 +70,7 @@ function App() {
     }
   };
 
-  const countResult = async () => {
+  const countResult = () => {
     if (displayCounter.length == 0) {
       setResult(0);
     } else {
@@ -104,15 +104,20 @@ function App() {
       setFirstValue(0);
     }
 
-    countResult();
+    if (
+      displayCounter[displayCounter.length - 1] != " - " &&
+      displayCounter[displayCounter.length - 1] != " + "
+    ) {
+      countResult();
+    }
   }, [displayCounter]);
 
   return (
     <>
       <div className="main-container bg-gradient-to-br from-white via-cyan-100 to-pink-100 ">
         {/* Display & Cards Components */}
+        <Display displayCounter={displayCounter} result={result} />
         <div className="inner-wrapper">
-          <Display displayCounter={displayCounter} result={result} />
           <div className="money-list mt-4 pb-[95px] min-h-[200px] gap-2 grid lg:grid-cols-5 md:grid-cols-3 max-[768px]:grid-cols-3 max-sm:grid-cols-2 max-[322px]:grid-cols-1">
             {moneys.map((money) => (
               <Card

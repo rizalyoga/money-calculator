@@ -1,52 +1,62 @@
 [
   {
     "nominal": "100",
-    "images": "https://en.numista.com/catalogue/photos/indonesie/6-original.jpg",
-    "image": "src/assets/pecahan-uang/100.jpg"
+    "image": "https://en.numista.com/catalogue/photos/indonesie/6-original.jpg",
+    "imagess": "src/assets/pecahan-uang/100.jpg",
+    "images": "./assets/pecahan-uang/100.jpg"
   },
   {
     "nominal": "200",
-    "images": "https://i.colnect.net/f/896/132/200-Rupiah.jpg",
-    "image": "src/assets/pecahan-uang/200.jpg"
+    "image": "https://i.colnect.net/f/896/132/200-Rupiah.jpg",
+    "imagess": "src/assets/pecahan-uang/200.jpg",
+    "images": "./assets/pecahan-uang/200.jpg"
   },
   {
     "nominal": "500",
-    "images": "https://i.colnect.net/f/3810/444/500-Rupiah-T-B-Simatupang.jpg",
-    "image": "src/assets/pecahan-uang/500.jpg"
+    "image": "https://i.colnect.net/f/3810/444/500-Rupiah-T-B-Simatupang.jpg",
+    "imagess": "src/assets/pecahan-uang/500.jpg",
+    "images": "./assets/pecahan-uang/500.jpg"
   },
   {
     "nominal": "1000",
-    "images": "https://backpackstory.files.wordpress.com/2014/11/1000rupiahperahu1.jpg",
-    "image": "src/assets/pecahan-uang/1000.jpg"
+    "image": "https://backpackstory.files.wordpress.com/2014/11/1000rupiahperahu1.jpg",
+    "imagess": "src/assets/pecahan-uang/1000.jpg",
+    "images": "./assets/pecahan-uang/1000.jpg"
   },
   {
     "nominal": "2000",
-    "images": "https://www.pegipegi.com/travel/wp-content/uploads/2017/08/dua-ribu.jpeg",
-    "image": "src/assets/pecahan-uang/2000.jpeg"
+    "image": "https://www.pegipegi.com/travel/wp-content/uploads/2017/08/dua-ribu.jpeg",
+    "imagess": "src/assets/pecahan-uang/2000.jpeg",
+    "images": "./assets/pecahan-uang/2000.jpeg"
   },
   {
     "nominal": "5000",
-    "images": "https://i.colnect.net/f/4430/664/5000_Rupiah.jpg",
-    "image": "src/assets/pecahan-uang/5000.jpg"
+    "image": "https://i.colnect.net/f/4430/664/5000_Rupiah.jpg",
+    "imagess": "src/assets/pecahan-uang/5000.jpg",
+    "images": "./assets/pecahan-uang/5000.jpg"
   },
   {
     "nominal": "10000",
-    "images": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_2016_10000r_r.jpg/250px-sIndonesia_2016_10000r_r.jpg",
-    "image": "src/assets/pecahan-uang/10000.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Indonesia_2016_10000r_r.jpg/250px-sIndonesia_2016_10000r_r.jpg",
+    "imagess": "src/assets/pecahan-uang/10000.jpg",
+    "images": "./assets/pecahan-uang/10000.jpg"
   },
   {
     "nominal": "20000",
-    "images": "https://ozip.com.au/wp-content/uploads/2020/08/20_2.png",
-    "image": "src/assets/pecahan-uang/20000.png"
+    "image": "https://ozip.com.au/wp-content/uploads/2020/08/20_2.png",
+    "imagess": "src/assets/pecahan-uang/20000.png",
+    "images": "./assets/pecahan-uang/20000.png"
   },
   {
     "nominal": "50000",
-    "images": "https://ozip.com.au/wp-content/uploads/2020/08/50_2.png",
-    "image": "src/assets/pecahan-uang/50000.png"
+    "image": "https://ozip.com.au/wp-content/uploads/2020/08/50_2.png",
+    "imagess": "src/assets/pecahan-uang/50000.png",
+    "images": "./assets/pecahan-uang/50000.png"
   },
   {
     "nominal": "100000",
-    "images": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Indonesia_2004_100000r_o.jpg",
-    "image": "src/assets/pecahan-uang/100000.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Indonesia_2004_100000r_o.jpg",
+    "imagess": "src/assets/pecahan-uang/100000.jpg",
+    "images": "./assets/pecahan-uang/100000.jpg"
   }
 ]

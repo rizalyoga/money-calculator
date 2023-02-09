@@ -3,8 +3,8 @@ import { rupiah } from "../../helper/formatRupiah";
 
 // Moneys Image
 import seratusRibu from "../../assets/pecahan-uang/100000.jpg";
-import limaPuluhRibu from "../../assets/pecahan-uang/50000.png";
-import duaPuluhRibu from "../../assets/pecahan-uang/20000.png";
+import limaPuluhRibu from "../../assets/pecahan-uang/50000.webp";
+import duaPuluhRibu from "../../assets/pecahan-uang/20000.webp";
 import sepuluhRibu from "../../assets/pecahan-uang/10000.jpg";
 import limaRibu from "../../assets/pecahan-uang/5000.jpg";
 import duaRibu from "../../assets/pecahan-uang/2000.jpeg";
@@ -94,12 +94,13 @@ const Modal = ({ isShowModal, setIsShowModal, result }: ModalProps) => {
                 {/*body*/}
                 <div className="relative p-6 flex-auto overflow-auto min-w-[40rem] max-sm:min-w-[20rem]">
                   {listMoney &&
-                    listMoney.map((nominal) => (
+                    listMoney.map((nominal, idx) => (
                       <img
                         className="py-2 h-[18.75rem] w-[40rem] max-sm:h-[10rem] max-sm:w-[30rem]"
                         src={setImageMoney(nominal)}
                         alt={`${nominal} rupiah`}
                         title={`${nominal} rupiah`}
+                        key={idx}
                       />
                     ))}
                 </div>
