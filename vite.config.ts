@@ -7,6 +7,12 @@ export default defineConfig({
   plugins: [
     VitePWA({
       registerType: "prompt",
+      // add this to cache all the imports
+      workbox: {
+        globPatterns: ["**/*"],
+      },
+      // add this to cache all the
+      // static assets in the public folder
       includeAssets: ["favicon.ico", "masked-icon.svg"],
       manifest: {
         name: "Kalkulator Uang",
