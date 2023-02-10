@@ -9,7 +9,7 @@ export default defineConfig({
       registerType: "prompt",
       // add this to cache all the imports
       workbox: {
-        globPatterns: ["**/*.{css,ts,js,jpg,jpeg,webp,png,svg}"],
+        globPatterns: ["**/*.{html,css,ts,js,jpg,jpeg,webp,png,svg}"],
       },
       // add this to cache all the
       // static assets in the public folder
@@ -19,6 +19,7 @@ export default defineConfig({
         short_name: "Kalkulator Uang",
         description: "Kalkulator dengan input berdasarkan pecahan uang rupiah",
         theme_color: "#F9A8D4",
+        background_color: "#F9A8D4",
         start_url: "/",
         icons: [
           {
