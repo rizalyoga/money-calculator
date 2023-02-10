@@ -9,7 +9,7 @@ export default defineConfig({
       registerType: "prompt",
       // add this to cache all the imports
       workbox: {
-        globPatterns: ["**/*.{jpg,jpeg,webp,png,svg}"],
+        globPatterns: ["**/*.{css,ts,js,jpg,jpeg,webp,png,svg}"],
       },
       // add this to cache all the
       // static assets in the public folder
