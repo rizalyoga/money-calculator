@@ -1,14 +1,14 @@
 import { rupiah } from "../../helper/formatRupiah";
-import seratusRibu from "../../assets/pecahan-uang/100000.jpg";
+import seratusRibu from "../../assets/pecahan-uang/100000.webp";
 import limaPuluhRibu from "../../assets/pecahan-uang/50000.webp";
 import duaPuluhRibu from "../../assets/pecahan-uang/20000.webp";
 import sepuluhRibu from "../../assets/pecahan-uang/10000.jpg";
-import limaRibu from "../../assets/pecahan-uang/5000.jpg";
+import limaRibu from "../../assets/pecahan-uang/5000.webp";
 import duaRibu from "../../assets/pecahan-uang/2000.jpeg";
-import seribu from "../../assets/pecahan-uang/1000.jpg";
-import limaRatus from "../../assets/pecahan-uang/500.jpg";
-import duaRatus from "../../assets/pecahan-uang/200.jpg";
-import seratus from "../../assets/pecahan-uang/100.jpg";
+import seribu from "../../assets/pecahan-uang/1000.webp";
+import limaRatus from "../../assets/pecahan-uang/500.webp";
+import duaRatus from "../../assets/pecahan-uang/200.webp";
+import seratus from "../../assets/pecahan-uang/100.webp";
 
 interface CardProps {
   nominal: string;
@@ -52,7 +52,9 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
     >
       <div className="image-money object-cover">
         <img
-          className="h-[250px] w-full object-cover rounded-t-md"
+          className={`h-[12.5rem] w-full ${
+            +nominal < 1000 ? "object-cover" : "object-fill"
+          }  rounded-t-md`}
           src={setImageMoney(+nominal)}
           alt="nominal-image"
         />

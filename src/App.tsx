@@ -118,7 +118,7 @@ function App() {
         {/* Display & Cards Components */}
         <Display displayCounter={displayCounter} result={result} />
         <div className="inner-wrapper">
-          <div className="money-list mt-4 pb-[95px] min-h-[200px] gap-2 grid lg:grid-cols-5 md:grid-cols-3 max-[768px]:grid-cols-3 max-sm:grid-cols-2 max-[322px]:grid-cols-1">
+          <div className="money-list mt-4 pb-[95px] min-h-[12.5rem] gap-2 grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1">
             {moneys.map((money) => (
               <Card
                 image={money.image}
