@@ -1,4 +1,8 @@
 import { rupiah } from "../../helper/formatRupiah";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import seratusRibu from "../../assets/pecahan-uang/100000.webp";
 import limaPuluhRibu from "../../assets/pecahan-uang/50000.webp";
 import duaPuluhRibu from "../../assets/pecahan-uang/20000.webp";
@@ -44,20 +48,65 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
     }
   };
 
+  const setFlipImageMoney = (nominal: number) => {
+    switch (nominal) {
+      case 100000:
+        return seratusRibu;
+      case 50000:
+        return seratusRibu;
+      case 20000:
+        return seratusRibu;
+      case 10000:
+        return seratusRibu;
+      case 5000:
+        return seratusRibu;
+      case 2000:
+        return seratusRibu;
+      case 1000:
+        return seratusRibu;
+      case 500:
+        return seratusRibu;
+      case 200:
+        return seratusRibu;
+      case 100:
+        return seratusRibu;
+      default:
+        break;
+    }
+  };
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
+
   return (
     <div
       className="money-button flex flex-col cursor-pointer bg-gradient-to-r from-pink-300  via-white to bg-sky-300 active:bg-gradient-to-r active:from-sky-300 to active:bg-pink-400 rounded-md"
       title={`${nominal} rupiah`}
       onClick={() => inputMoney(nominal)}
     >
-      <div className="image-money object-cover">
-        <img
-          className={`h-[12.5rem] w-full ${
-            +nominal < 1000 ? "object-cover" : "object-fill"
-          }  rounded-t-md`}
-          src={setImageMoney(+nominal)}
-          alt="nominal-image"
-        />
+      <div className="image-money object-cover ">
+        <Slider {...settings}>
+          <img
+            className={`h-[12.5rem] w-full ${
+              +nominal < 1000 ? "object-cover" : "object-fill"
+            }  rounded-t-md`}
+            src={setImageMoney(+nominal)}
+            alt="nominal-image"
+          />
+
+          <img
+            className={`h-[12.5rem] w-full ${
+              +nominal < 1000 ? "object-cover" : "object-fill"
+            }  rounded-t-md`}
+            src={setFlipImageMoney(+nominal)}
+            alt="nominal-image"
+          />
+        </Slider>
       </div>
       <span className="text-center py-2 text-slate-700 font-bold">
         {rupiah(+nominal)}
