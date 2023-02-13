@@ -77,10 +77,13 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    speed: 200,
+    autoplay: true,
+    autoplaySpeed: 4000,
   };
 
   return (
