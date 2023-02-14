@@ -23,7 +23,7 @@ const Display = ({ displayCounter, result }: DisplayProps) => {
 
   return (
     <div
-      className={`display sticky top-0 min-h-[250px]flex flex-col ${
+      className={`display sticky top-0 min-h-[250px]flex flex-col z-10 ${
         scrollTop != 0 ? "pt-0" : "pt-3.5"
       }`}
     >
