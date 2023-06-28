@@ -102,13 +102,13 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
             alt="nominal-image"
           />
 
-          <img
+          {/* <img
             className={`h-[12.5rem] w-full ${
               +nominal < 1000 ? "object-cover" : "object-fill"
             }  rounded-t-md`}
             src={setFlipImageMoney(+nominal)}
             alt="nominal-image"
-          />
+          /> */}
         </Slider>
       </div>
       <span className="text-center py-2 text-slate-700 font-bold">
