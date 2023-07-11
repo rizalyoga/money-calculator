@@ -2,6 +2,7 @@ import { rupiah } from "../../helper/formatRupiah";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import useSound from "use-sound";
 
 import seratusRibu from "../../assets/pecahan-uang/100000.webp";
 import limaPuluhRibu from "../../assets/pecahan-uang/50000.webp";
@@ -14,6 +15,8 @@ import limaRatus from "../../assets/pecahan-uang/500.webp";
 import duaRatus from "../../assets/pecahan-uang/200.webp";
 import seratus from "../../assets/pecahan-uang/100.webp";
 
+import tapSoundEffect from "../../assets/audio/klick-effect.mp3";
+
 interface CardProps {
   nominal: string;
   image?: string;
@@ -21,6 +24,8 @@ interface CardProps {
 }
 
 const Card = ({ nominal, inputMoney }: CardProps) => {
+  const [play] = useSound(tapSoundEffect);
+
   const setImageMoney = (nominal: number) => {
     switch (nominal) {
       case 100000:
@@ -90,7 +95,9 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
     <div
       className="money-button flex flex-col cursor-pointer bg-gradient-to-r from-pink-300  via-white to bg-sky-300 active:bg-gradient-to-r active:from-sky-300 to active:bg-pink-400 rounded-md"
       title={`${nominal} rupiah`}
-      onClick={() => inputMoney(nominal)}
+      onClick={() => {
+        inputMoney(nominal), play();
+      }}
     >
       <div className="image-money object-cover ">
         <Slider {...settings}>

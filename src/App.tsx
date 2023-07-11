@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { evaluate } from "mathjs";
 import nominal from "./data/nominal.json";
+import useSound from "use-sound";
 
 // Components
 import { showAlert } from "./components/alert/Alert";
@@ -9,6 +10,8 @@ import Display from "./components/display/Display";
 import Footer from "./components/footer/Footer";
 import Card from "./components/card/Card";
 import Modal from "./components/modal/Modal";
+
+import warningSoundEffect from "./assets/audio/warning.mp3";
 
 interface Money {
   nominal: string;
@@ -22,6 +25,8 @@ function App() {
   const [displayCounter, setDisplayCounter] = useState<string[]>([]);
   const [isShowModal, setIsShowModal] = useState<boolean>(false);
 
+  const [playWarning] = useSound(warningSoundEffect);
+
   const inputMoney = (nominal: string): void => {
     if (firstValue == 0) {
       setFirstValue(+nominal);
@@ -33,6 +38,7 @@ function App() {
       setDisplayCounter([...displayCounter, nominal]);
     } else {
       showAlert();
+      playWarning();
     }
   };
 
