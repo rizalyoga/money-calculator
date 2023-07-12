@@ -93,7 +93,7 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
 
   return (
     <div
-      className="money-button flex flex-col cursor-pointer bg-gradient-to-r from-pink-300  via-white to bg-sky-300 active:bg-gradient-to-r active:from-sky-300 to active:bg-pink-400 rounded-md"
+      className="money-button flex flex-col cursor-pointer bg-gradient-to-br from-[#FC93B4] to bg-[#D27889] active:bg-gradient-to-r active:bg-[#FBD0D7] rounded-3xl neumorphism-shadow focus:outline-none focus:ring"
       title={`${nominal} rupiah`}
       onClick={() => {
         inputMoney(nominal), play();
@@ -104,7 +104,7 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
           <img
             className={`h-[12.5rem] w-full ${
               +nominal < 1000 ? "object-cover" : "object-fill"
-            }  rounded-t-md`}
+            }  rounded-t-3xl`}
             src={setImageMoney(+nominal)}
             alt="nominal-image"
           />
@@ -118,7 +118,7 @@ const Card = ({ nominal, inputMoney }: CardProps) => {
           /> */}
         </Slider>
       </div>
-      <span className="text-center py-2 text-slate-700 font-bold">
+      <span className="text-center py-2 text-[#F2F3F9] font-bold">
         {rupiah(+nominal)}
       </span>
     </div>

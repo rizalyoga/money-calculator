@@ -35,7 +35,7 @@ const Display = ({ displayCounter, result }: DisplayProps) => {
         <h1
           className={`${
             scrollTop != 0 ? "text-lg" : "text-2xl"
-          }  text-slate-700 font-bold`}
+          }  text-slate-800 font-bold`}
         >
           {displayCounter}
         </h1>
@@ -43,7 +43,7 @@ const Display = ({ displayCounter, result }: DisplayProps) => {
       <div
         className={`${
           scrollTop != 0 ? "min-h-[60px] shadow-lg" : "min-h-[80px]"
-        } bg-pink-300 flex justify-center items-center p-3 rounded-b-xl`}
+        } bg-[#EE8997] flex justify-center items-center p-3 rounded-b-xl`}
       >
         <h1 className="text-2xl font-bold">{rupiah(+result)}</h1>
       </div>
