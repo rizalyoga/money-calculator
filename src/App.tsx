@@ -120,11 +120,11 @@ function App() {
 
   return (
     <>
-      <div className="main-container bg-gradient-to-br from-white via-cyan-100 to-pink-100 ">
+      <div className="main-container bg-gradient-to-br bg-[#F2F3F9] ">
         {/* Display & Cards Components */}
         <Display displayCounter={displayCounter} result={result} />
         <div className="inner-wrapper">
-          <div className="money-list mt-4 pb-[95px] min-h-[12.5rem] gap-2 grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1">
+          <div className="money-list mt-4 pb-[95px] min-h-[12.5rem] gap-4 grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1">
             {moneys.map((money) => (
               <Card
                 image={money.image}
