@@ -56,7 +56,8 @@ const Footer = ({
       <button
         className="font-bold text-4xl bg-[#FFBD66] text-white py-4 px-4 rounded-full active:bg-red-300 active:text-white neumorphism-shadow-button focus:outline-none focus:ring"
         onClick={() => {
-          showModal(), playResult();
+          showModal();
+          //  playResult();
         }}
       >
         <img src={equalIcon} alt="equal-icon" className="w-[28px]" />

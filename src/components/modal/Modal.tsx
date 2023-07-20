@@ -27,6 +27,7 @@ const Modal = ({ isShowModal, setIsShowModal, result }: ModalProps) => {
 
   let newValue: number = result;
   let moneys: number[] = [];
+  const synth = window.speechSynthesis;
 
   const splitResult = () => {
     for (let i = 0; i < listNominal.length; i++) {
@@ -74,6 +75,13 @@ const Modal = ({ isShowModal, setIsShowModal, result }: ModalProps) => {
   };
 
   useEffect(() => {
+    if (isShowModal) {
+      let voice = new SpeechSynthesisUtterance(
+        `Sama dengan ${newValue} Rupiah`
+      );
+      voice.lang = "id-ID";
+      synth.speak(voice);
+    }
     splitResult();
   }, [isShowModal]);
 
